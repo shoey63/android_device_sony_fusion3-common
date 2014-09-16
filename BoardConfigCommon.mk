@@ -154,6 +154,7 @@ TW_INCLUDE_FUSE_EXFAT := true
 TW_BRIGHTNESS_PATH := /sys/devices/i2c-0/0-0036/leds/lm3533-lcd-bl/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
+TW_NO_SCREEN_BLANK := true
 
 BOARD_SEPOLICY_DIRS += \
     device/sony/fusion3-common/sepolicy
