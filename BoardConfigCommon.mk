@@ -71,9 +71,6 @@ TARGET_NO_RPC := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
 
-# RIL
-BOARD_HAS_RIL_LEGACY_PAP := true
-
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
