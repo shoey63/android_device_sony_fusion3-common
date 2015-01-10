@@ -12,3 +12,6 @@ allow rild sysfs:file { read open write getattr };
 
 allow rild shared_memory_device:chr_file { write open };
 allow rild qmuxd_socket:dir remove_name;
+
+allow rild mediaserver:binder { transfer call };
+allow rild servicemanager:binder call;

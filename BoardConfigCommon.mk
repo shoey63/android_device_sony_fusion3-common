@@ -152,11 +152,14 @@ BOARD_SEPOLICY_UNION += \
     mac_update.te \
     mediaserver.te \
     mpdecision.te \
+    netd.te \
     netmgrd.te \
     property_contexts \
     qmux.te \
     rild.te \
+    servicemanager.te \
     surfaceflinger.te \
+    system_app.te \
     system_server.te \
     tee.te \
     te_macros \

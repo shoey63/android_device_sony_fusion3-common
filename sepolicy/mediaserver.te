@@ -20,3 +20,7 @@ allow mediaserver self:socket { read ioctl };
 allow mediaserver system_data_file:file { write open };
 allow mediaserver system_server:unix_stream_socket { read write };
 allow mediaserver camera_device:dir search;
+
+allow mediaserver rild:binder call;
+allow mediaserver system_data_file:dir { write add_name };
+allow mediaserver system_data_file:file create;
