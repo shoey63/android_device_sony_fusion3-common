@@ -36,7 +36,6 @@ TARGET_CPU_VARIANT := krait
 
 # Bionic
 BOARD_USES_LEGACY_MMAP := true
-TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Kernel information
 BOARD_KERNEL_BASE     := 0x80200000
