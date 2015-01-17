@@ -167,9 +167,6 @@ BOARD_SEPOLICY_UNION += \
     ueventd.te \
     wpa_supplicant.te
 
-# CMHW
-BOARD_HARDWARE_CLASS := device/sony/fusion3-common/cmhw
-
 # Logd
 TARGET_USES_LOGD := false
 
