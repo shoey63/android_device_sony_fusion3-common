@@ -26,6 +26,9 @@ busybox mknod -m 666 /dev/null c 1 3
 busybox mount -t proc proc /proc
 busybox mount -t sysfs sysfs /sys
 
+# trigger vibration
+busybox echo 100 > ${BOOTREC_VIBRATOR}
+
 # trigger amber LED
 busybox echo 255 > ${BOOTREC_LED_RED}
 busybox echo 0 > ${BOOTREC_LED_GREEN}
