@@ -33,3 +33,6 @@
 /system/bin/ta_qmi_client           u:object_r:ta_qmi_client_exec:s0
 /system/bin/tad_static              u:object_r:tad_exec:s0
 /system/bin/updatemiscta            u:object_r:updatemiscta_exec:s0
+
+# mdm
+/dev/block/platform/msm_sdcc.1/by-name/m9kefs(.*)        u:object_r:efs_boot_dev:s0

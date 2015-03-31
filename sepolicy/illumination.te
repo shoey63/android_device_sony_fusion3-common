@@ -12,7 +12,8 @@ wakelock_use(illumination)
 allow illumination sysfs:file write;
 
 # Access light themes
-allow illumination system_data_file:file rw_file_perms;
+allow illumination system_data_file:dir { add_name write };
+allow illumination system_data_file:file { create rw_file_perms };
 
 # Access uhid
 allow illumination uhid_device:chr_file rw_file_perms;

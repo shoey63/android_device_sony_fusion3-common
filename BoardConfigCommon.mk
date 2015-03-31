@@ -147,12 +147,17 @@ BOARD_SEPOLICY_UNION += \
     mdm_helper.te \
     mediaserver.te \
     mpdecision.te \
+    netmgrd.te \
     radio.te \
     recovery.te \
+    sdcardd.te \
+    servicemanager.te \
+    shell.te \
     system_app.te \
     system_monitor.te \
     system_server.te \
     tad.te \
     ta_qmi_client.te \
     updatemiscta.te \
-    wpa.te
+    wpa.te \
+    zygote.te

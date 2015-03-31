@@ -10,4 +10,6 @@ allow vold rootfs:dir { write add_name };
 # /blkid.tab
 #allow vold rootfs:file { create write };
 
+allow recovery selinuxfs:file write;
+
 ')
