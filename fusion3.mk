@@ -212,5 +212,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
 
+# SELinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/fusion3-common/fusion3-common-vendor.mk)
