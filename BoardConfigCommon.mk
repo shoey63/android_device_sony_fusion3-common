@@ -187,10 +187,10 @@ BOARD_SEPOLICY_UNION += \
     servicemanager.te \
     shell.te \
     system_app.te \
-    system_monitor.te \
     system_server.te \
     tad.te \
     ta_qmi_client.te \
+    thermanager.te \
     updatemiscta.te \
     wpa.te \
     zygote.te
