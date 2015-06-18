@@ -99,6 +99,7 @@
 /dev/msm_voicememo        0660   system     audio
 
 # System ALS
+/dev/input/event10        0660   system     camera
 /dev/input/event11        0660   system     camera
 
 /sys/devices/virtual/graphics/fb1   edid_modes          0440 system system
