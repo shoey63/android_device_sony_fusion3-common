@@ -1,4 +1,6 @@
 # For phone app access to touch to wake
 allow radio sysfs_touchpanel:file rw_file_perms;
 
-allow radio system_app_data_file:file getattr;
+# needed for access to shared prefs file
+allow radio system_app_data_file:dir search;
+allow radio system_app_data_file:file { getattr r_file_perms };
