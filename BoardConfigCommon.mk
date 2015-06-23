@@ -64,7 +64,6 @@ TARGET_NO_RPC := true
 
 # Graphics
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 HAVE_ADRENO_SOURCE := false
 
 # RIL
