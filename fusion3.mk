@@ -143,6 +143,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/usr/keylayout/mhl-rcp.kl:system/usr/keylayout/mhl-rcp.kl \
     $(COMMON_PATH)/rootdir/system/usr/keylayout/pmic8xxx_pwrkey.kl:system/usr/keylayout/pmic8xxx_pwrkey.kl
 
+# Healthd
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 # Misc
 PRODUCT_PACKAGES += \
     librs_jni \
@@ -171,7 +175,6 @@ PRODUCT_COPY_FILES += \
 
 # Additional sbin stuff
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/charger:root/charger \
     $(COMMON_PATH)/rootdir/sbin/wait4tad_static:root/sbin/wait4tad_static \
     $(COMMON_PATH)/rootdir/system/bin/tad_static:system/bin/tad_static
 
