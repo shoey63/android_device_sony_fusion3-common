@@ -93,8 +93,6 @@ on early-boot
 
     write /sys/devices/platform/msm_hsic_host/override_wakelock 0
     write /sys/module/pm8921_charger/parameters/eoc_bat_fet_close 1
-    # Start the offline charging (This blocks booting further in some cases)
-    exec /system/bin/chargemon
     write /sys/module/pm8921_charger/parameters/eoc_bat_fet_close 0
     write /sys/devices/platform/msm_hsic_host/override_wakelock 1
     write /sys/module/pm8921_charger/parameters/enable_lowbatt_detect 1
