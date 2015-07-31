@@ -146,6 +146,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hci_qcomm_init
 
+# GPS
+PRODUCT_PACKAGES += \
+    libgps.utils \
+    libloc_core \
+    libloc_eng \
+    gps.msm8960
+
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
