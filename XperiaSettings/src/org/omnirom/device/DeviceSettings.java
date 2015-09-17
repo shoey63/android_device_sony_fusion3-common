@@ -21,6 +21,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.view.MenuItem;
 
 import org.omnirom.device.R;
 
@@ -48,6 +49,7 @@ public class DeviceSettings extends PreferenceActivity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         setupSimplePreferencesScreen();
     }
@@ -107,6 +109,17 @@ public class DeviceSettings extends PreferenceActivity {
             return true;
         }
     };
+
+    public boolean onOptionsItemSelected (MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     /**
      * Binds a preference's summary to its value. More specifically, when the
