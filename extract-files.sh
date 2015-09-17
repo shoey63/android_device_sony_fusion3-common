@@ -65,6 +65,6 @@ do
   fi
 done
 
-exit 0
+../fusion3-common/setup-makefiles.sh
 
-./setup-makefiles.sh
+exit 0
