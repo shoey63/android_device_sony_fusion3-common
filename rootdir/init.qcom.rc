@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+import init.sony.rc
 import init.device.rc
 import init.sony.usb.rc
 

@@ -98,6 +98,14 @@
 /dev/msm_rtac             0660   system     audio
 /dev/msm_voicememo        0660   system     audio
 
+# native sensors
+/sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
+/sys/devices/i2c-12/12-*  enable      0664 system system
+/sys/devices/i2c-12/12-*  poll_delay  0664 system system
+
+# Sensors
+/dev/iio:device*          0660   system     input
+
 # System ALS
 /dev/input/event10        0660   system     camera
 /dev/input/event11        0660   system     camera

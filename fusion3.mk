@@ -171,10 +171,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     lights.qcom
 
-# Sensors
-PRODUCT_PACKAGES += \
-    sensors.msm8960
-
 # Thermal management
 PRODUCT_PACKAGES += \
     thermanager
@@ -227,6 +223,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
     $(COMMON_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc \
+    $(COMMON_PATH)/rootdir/init.sony.rc:root/init.sony.rc \
     $(COMMON_PATH)/rootdir/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
     $(COMMON_PATH)/rootdir/system/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
 

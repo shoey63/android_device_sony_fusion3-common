@@ -69,6 +69,7 @@ etc/firmware/wlan/prima/WCNSS_cfg.dat
 etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 lib/hw/camera.vendor.qcom.so
 lib/hw/lights.vendor.default.so
+lib/hw/sensors.default.so
 lib/libacdbloader.so
 lib/libadsprpc.so
 lib/libals.so
@@ -96,6 +97,7 @@ lib/libidl.so
 lib/libimage-jpeg-dec-omx-comp.so
 lib/libimage-jpeg-enc-omx-comp.so
 lib/libimage-omx-common.so
+lib/libinvensense_hal.so
 lib/libkeyctrl.so
 lib/liblights-core.so
 lib/libloc_adapter.so
@@ -138,7 +140,6 @@ lib/libqmiservices.so
 lib/libqmi.so
 lib/libQSEEComAPI.so
 lib/libril-qc-qmi-1.so
-lib/libsensors_akm8963.so
 lib/libsys-utils.so
 lib/libta.so
 lib/libtime_genoff.so
