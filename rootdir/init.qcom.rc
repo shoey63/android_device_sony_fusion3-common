@@ -140,8 +140,6 @@ on boot
     # Allow QMUX daemon to assign port open wait time
     chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
 
-    setprop ro.telephony.call_ring.multiple false
-
     # Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
 
@@ -223,8 +221,6 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
-    exec /system/bin/cal_data_manager init
-
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
@@ -280,9 +276,6 @@ on post-fs-data
 
     # Camera
     mkdir /data/camera 0771 root camera
-
-    # Enable Power save functionality for modem
-    setprop persist.radio.add_power_save 1
 
     setprop vold.post_fs_data_done 1
 
@@ -406,8 +399,8 @@ on property:bluetooth.hciattach=false
 
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
-    class late_start
-    user radio
+    class core
+    user root
     group radio audio bluetooth gps qcom_diag net_bt_stack
     disabled
 

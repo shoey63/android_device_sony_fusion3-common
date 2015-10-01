@@ -90,7 +90,6 @@ BLUE_LED_PATH := /sys/class/leds/lm3533-blue/brightness
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
-BOARD_HAS_RIL_LEGACY_PAP := true
 BOARD_RIL_CLASS := ../../../device/sony/fusion3-common/ril/
 
 # Lights HAL
