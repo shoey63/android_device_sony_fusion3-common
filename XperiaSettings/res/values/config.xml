@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2014 Arnav Gupta, AOKP
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<resources>
+
+    <!-- Vibrator -->
+    <bool name="has_vibrator_tuning">false</bool>
+    <string name="vibrator_sysfs_file">"/sys/class/timed_output/vibrator/level"</string>
+    <string name="intensity_max_value">100</string>
+    <string name="intensity_warning_threshold">80</string>
+    <string name="intensity_default_value">50</string>
+    <string name="intensity_min_value">0</string>
+
+
+    <!-- Pen Mode -->
+    <bool name="has_penmode">false</bool>
+    <string name="penmode_sysfs_file">"/sys/devices/virtual/input/clearpad/pen"</string>
+    <string name="penmode_enabled_value">1</string>
+    <string name="penmode_disabled_value">0</string>
+
+    <!-- Pen Mode -->
+    <bool name="has_knock_on">false</bool>
+    <string name="knock_on_sysfs_file">"/sys/devices/virtual/input/clearpad/wakeup_gesture"</string>
+    <string name="knock_on_enabled_value">1</string>
+    <string name="knock_on_disabled_value">0</string>
+
+</resources>

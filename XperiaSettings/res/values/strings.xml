@@ -1,0 +1,45 @@
+<!--
+  ~ Copyright (C) 2014 Arnav Gupta, AOKP
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">XperiaSettings</string>
+    <string name="title_activity_xperia_settings">Xperia Settings</string>
+
+
+    <string name="defaults_button">Reset to default</string>
+    <string name="summary_unsupported">Not supported</string>
+
+
+    <!-- Strings related to Haptic -->
+    <string name="title_haptic">Haptic</string>
+    <!-- VibratorTuning -->
+    <string name="vibrator_title">Vibrator</string>
+    <string name="vibrator_tuning_title">Vibration strength</string>
+    <string name="vibrator_tuning_summary_head">Adjust the strength of the vibration feedback</string>
+    <string name="vibrator_warning">Values higher than %1$d are not recommended</string>
+
+
+    <!-- Touchscreen -->
+    <string name="title_touchscreen">Touchscreen</string>
+    <!-- Pen Mode -->
+    <string name="penmode_title">Pen Mode</string>
+    <string name="penmode_summary">"Enable using any ordinary pen or pencil as stylus"</string>
+    <!-- Knock On -->
+    <string name="knock_on_title">Knock On</string>
+    <string name="knock_on_summary">"Double tap screen to wake device from sleep"</string>
+
+
+</resources>
