@@ -16,9 +16,9 @@
   ~  limitations under the License.
   -->
 <resources>
-  <string name="app_name">XperiaSettings</string>
+  <string name="app_name">Xperia-Einstellungen</string>
   <string name="title_activity_xperia_settings">Xperia-Einstellungen</string>
-  <string name="defaults_button">Zurück zur Grundeinstellung</string>
+  <string name="defaults_button">Zurücksetzen</string>
   <string name="summary_unsupported">Nicht unterstützt</string>
   <string name="title_haptic">Haptik</string>
   <string name="vibrator_title">Vibration</string>
@@ -26,8 +26,6 @@
   <string name="vibrator_tuning_summary_head">Verändere die Stärke der Vibration</string>
   <string name="vibrator_warning">Höhere Werte als %1$d werden nicht empfohlen</string>
   <string name="title_touchscreen">Touchscreen</string>
-  <string name="penmode_title">Stiftmodus</string>
-  <string name="penmode_summary">"Das Benutzen handelsüblicher Stifte als Stylus aktivieren"</string>
   <string name="knock_on_title">Anklopfen</string>
   <string name="knock_on_summary">"Auf Bildschirm doppelt tippen, um Gerät aus dem Ruhemodus aufzuwecken"</string>
 </resources>

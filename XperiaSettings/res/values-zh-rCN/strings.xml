@@ -26,8 +26,6 @@
   <string name="vibrator_tuning_summary_head">调整震动反馈强度</string>
   <string name="vibrator_warning">不推荐高于 %1$d 的振动强度</string>
   <string name="title_touchscreen">触摸屏</string>
-  <string name="penmode_title">笔模式</string>
-  <string name="penmode_summary">"启用使用任何普通的钢笔或铅笔作为手写笔"</string>
   <string name="knock_on_title">敲击</string>
   <string name="knock_on_summary">"双击屏幕唤醒休眠状态的设备"</string>
 </resources>

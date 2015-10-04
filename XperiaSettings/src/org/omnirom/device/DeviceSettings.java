@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package org.omnirom.device;
 
 import android.os.Bundle;
 import android.preference.ListPreference;
@@ -22,9 +22,7 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
-import com.cyanogenmod.settings.device.prefs.KnockOnPreference;
-import com.cyanogenmod.settings.device.prefs.PenModePreference;
-import com.cyanogenmod.settings.device.prefs.VibratorTuningPreference;
+import org.omnirom.device.R;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -73,7 +71,6 @@ public class DeviceSettings extends PreferenceActivity {
 
         //Disable unsupported prefs here
         ((VibratorTuningPreference) findPreference("vibrator_tuning")).checkSupport();
-        ((PenModePreference) findPreference("penmode")).checkSupport();
         ((KnockOnPreference) findPreference("knock_on")).checkSupport();
 
 

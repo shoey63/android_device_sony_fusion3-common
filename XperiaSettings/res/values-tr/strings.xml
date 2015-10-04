@@ -26,8 +26,6 @@
   <string name="vibrator_tuning_summary_head">Titreşim geri bildirim gücünü ayarla</string>
   <string name="vibrator_warning">%1$d üzerindeki değerler önerilmez</string>
   <string name="title_touchscreen">Dokunmatik ekran</string>
-  <string name="penmode_title">Kalem modu</string>
-  <string name="penmode_summary">"Sıradan bir kalemi stylus kalem gibi kullanabilmeyi etkinleştir"</string>
   <string name="knock_on_title">Açmak için tıkla</string>
   <string name="knock_on_summary">"Uyku modundan uyandırmak için ekrana çift dokunun"</string>
 </resources>

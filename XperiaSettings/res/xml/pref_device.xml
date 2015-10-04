@@ -19,18 +19,14 @@
     <PreferenceCategory
         android:title="@string/title_haptic"
         android:dependency="vibrator_tuning">
-        <com.cyanogenmod.settings.device.prefs.VibratorTuningPreference
+        <org.omnirom.device.VibratorTuningPreference
             android:key="vibrator_tuning"
             android:title="@string/vibrator_tuning_title"
             android:dialogTitle="@string/vibrator_tuning_title" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/title_touchscreen">
-        <com.cyanogenmod.settings.device.prefs.PenModePreference
-            android:key="penmode"
-            android:summary="@string/penmode_summary"
-            android:title="@string/penmode_title" />
-        <com.cyanogenmod.settings.device.prefs.KnockOnPreference
+        <org.omnirom.device.KnockOnPreference
             android:key="knock_on"
             android:title="@string/knock_on_title"
             android:summary="@string/knock_on_summary"/>

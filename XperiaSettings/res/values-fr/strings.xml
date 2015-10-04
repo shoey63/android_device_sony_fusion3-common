@@ -26,8 +26,6 @@
   <string name="vibrator_tuning_summary_head">Définir l\'intensité du vibreur</string>
   <string name="vibrator_warning">Les valeurs supérieures à %1$d ne sont pas recommandées</string>
   <string name="title_touchscreen">Écran</string>
-  <string name="penmode_title">Mode stylo</string>
-  <string name="penmode_summary">"Activer en utilisant un stylo ordinaire ou un crayon comme stylet"</string>
   <string name="knock_on_title">Knock On</string>
   <string name="knock_on_summary">"Double appui sur l'écran pour sortir de veille l'appareil"</string>
 </resources>

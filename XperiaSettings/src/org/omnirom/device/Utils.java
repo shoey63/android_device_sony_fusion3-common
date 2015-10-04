@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package org.omnirom.device;
 
 import android.app.AlertDialog;
 import android.content.Context;

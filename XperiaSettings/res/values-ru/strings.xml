@@ -26,8 +26,6 @@
   <string name="vibrator_tuning_summary_head">Регулировка силы виброотклика</string>
   <string name="vibrator_warning">Значения выше %1$d не рекомендуются</string>
   <string name="title_touchscreen">Сенс. экран</string>
-  <string name="penmode_title">Режим ручки</string>
-  <string name="penmode_summary">"Вкл использование любой обычной ручки или карандаша в качестве стилуса"</string>
   <string name="knock_on_title">Стук</string>
   <string name="knock_on_summary">"Двойное нажатие на экране для пробуждения устройства"</string>
 </resources>

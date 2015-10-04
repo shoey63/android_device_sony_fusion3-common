@@ -26,8 +26,6 @@
   <string name="vibrator_tuning_summary_head">Dostosuj siłę wibracji</string>
   <string name="vibrator_warning">Wartości wyższe niż %1$d nie są zalecane</string>
   <string name="title_touchscreen">Ekran</string>
-  <string name="penmode_title">Tryb pióra</string>
-  <string name="penmode_summary">"Zezwól na używanie zwykłego ołówka lub długopisu jako rysika"</string>
   <string name="knock_on_title">Knock On</string>
   <string name="knock_on_summary">"Dwukrotnie dotknij ekranu, by wybudzić urządzenie"</string>
 </resources>

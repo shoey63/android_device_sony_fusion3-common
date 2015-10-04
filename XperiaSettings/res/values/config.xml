@@ -18,24 +18,14 @@
 <resources>
 
     <!-- Vibrator -->
-    <bool name="has_vibrator_tuning">false</bool>
-    <string name="vibrator_sysfs_file">"/sys/class/timed_output/vibrator/level"</string>
-    <string name="intensity_max_value">100</string>
-    <string name="intensity_warning_threshold">80</string>
-    <string name="intensity_default_value">50</string>
-    <string name="intensity_min_value">0</string>
+    <string name="vibrator_sysfs_file" translatable="false">"/sys/class/timed_output/vibrator/level"</string>
+    <string name="intensity_max_value" translatable="false">32</string>
+    <string name="intensity_warning_threshold" translatable="false">30</string>
+    <string name="intensity_default_value" translatable="false">29</string>
+    <string name="intensity_min_value" translatable="false">20</string>
 
-
-    <!-- Pen Mode -->
-    <bool name="has_penmode">false</bool>
-    <string name="penmode_sysfs_file">"/sys/devices/virtual/input/clearpad/pen"</string>
-    <string name="penmode_enabled_value">1</string>
-    <string name="penmode_disabled_value">0</string>
-
-    <!-- Pen Mode -->
-    <bool name="has_knock_on">false</bool>
-    <string name="knock_on_sysfs_file">"/sys/devices/virtual/input/clearpad/wakeup_gesture"</string>
-    <string name="knock_on_enabled_value">1</string>
-    <string name="knock_on_disabled_value">0</string>
-
+    <!-- Knock On -->
+    <string name="knock_on_sysfs_file" translatable="false">"/sys/devices/virtual/input/clearpad/wakeup_gesture"</string>
+    <string name="knock_on_enabled_value" translatable="false">1</string>
+    <string name="knock_on_disabled_value" translatable="false">0</string>
 </resources>

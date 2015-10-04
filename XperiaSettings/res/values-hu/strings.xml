@@ -26,8 +26,6 @@
   <string name="vibrator_tuning_summary_head">Állítsa be a rezgés erősségét</string>
   <string name="vibrator_warning">Nem ajánlott %1$d értéknél nagyobbra állítani</string>
   <string name="title_touchscreen">Érintőképernyő</string>
-  <string name="penmode_title">Toll üzemmód</string>
-  <string name="penmode_summary">"Engedélyezi bármely rendes toll vagy ceruza tollként való használatát"</string>
   <string name="knock_on_title">Knock On</string>
   <string name="knock_on_summary">"A képernyőn való dupla érintés felébreszti az alvó eszközt"</string>
 </resources>

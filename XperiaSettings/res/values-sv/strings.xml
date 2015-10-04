@@ -26,8 +26,6 @@
   <string name="vibrator_tuning_summary_head">Justera styrkan i vibrationsåterkoppling</string>
   <string name="vibrator_warning">Värden högre än %1$d rekommenderas inte</string>
   <string name="title_touchscreen">Pekskärm</string>
-  <string name="penmode_title">Pennläge</string>
-  <string name="penmode_summary">"Möjligt att använda en vanlig penna eller penna som penna"</string>
   <string name="knock_on_title">Knacka på</string>
   <string name="knock_on_summary">"Dubbeltryck på skärmen för att aktivera enheten från vila"</string>
 </resources>

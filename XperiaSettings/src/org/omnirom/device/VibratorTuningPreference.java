@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.cyanogenmod.settings.device.prefs;
+package org.omnirom.device;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -35,8 +35,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.cyanogenmod.settings.device.R;
-import com.cyanogenmod.settings.device.Utils;
+import org.omnirom.device.R;
 
 /**
  * Special preference type that allows configuration of vibrator intensity settings on Sony
@@ -50,7 +49,6 @@ public class VibratorTuningPreference extends DialogPreference implements SeekBa
     private static int WARNING_THRESHOLD;
     private static int DEFAULT_VALUE;
     private static int MIN_VALUE;
-    private static Boolean SUPPORTED;
 
     private Context mContext;
     private SeekBar mSeekBar;
@@ -70,7 +68,6 @@ public class VibratorTuningPreference extends DialogPreference implements SeekBa
         WARNING_THRESHOLD = Integer.valueOf(context.getResources().getString(R.string.intensity_warning_threshold));
         DEFAULT_VALUE = Integer.valueOf(context.getResources().getString(R.string.intensity_default_value));
         MIN_VALUE = Integer.valueOf(context.getResources().getString(R.string.intensity_min_value));
-        SUPPORTED = context.getResources().getBoolean(R.bool.has_vibrator_tuning);
 
         setDialogLayoutResource(R.layout.preference_dialog_vibrator_tuning);
     }
@@ -173,7 +170,6 @@ public class VibratorTuningPreference extends DialogPreference implements SeekBa
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
         int strength = percentToStrength(settings.getInt("percent", strengthToPercent(DEFAULT_VALUE)));
 
-        Log.d(TAG, "Restoring vibration setting: " + strength);
         Utils.writeValue(FILE_PATH, String.valueOf(strength));
     }
 
@@ -240,7 +236,8 @@ public class VibratorTuningPreference extends DialogPreference implements SeekBa
         Boolean fileExists = Utils.fileExists(FILE_PATH);
         //Log.d(TAG, "File exists : " + fileExists);
         //Log.d(TAG, "Enabled via config : " + isEnabledInConfig);
-        if ((SUPPORTED && fileExists)) {
+        if (fileExists) {
+            Log.w(TAG, "File exists: " + FILE_PATH + " : " + fileExists);
             return true;
         } else {
             setSummary(R.string.summary_unsupported);

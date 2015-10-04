@@ -26,8 +26,6 @@
   <string name="vibrator_tuning_summary_head">Síla vibrací</string>
   <string name="vibrator_warning">Hodnoty vyšší než %1$d nejsou doporučeny</string>
   <string name="title_touchscreen">Dotyková obrazovka</string>
-  <string name="penmode_title">Režim tužky</string>
-  <string name="penmode_summary">"Umožnit použití obyčejné tužky či propisky jako stylusu"</string>
   <string name="knock_on_title">Poklepání</string>
   <string name="knock_on_summary">"Dvojím poklepáním na displej dojde k probuzení zařízení"</string>
 </resources>
