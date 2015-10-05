@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 Arnav Gupta, AOKP
+ * Copyright (C) 2015 Olivier K.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,11 +45,11 @@ import org.omnirom.device.R;
 public class VibratorTuningPreference extends DialogPreference implements SeekBar.OnSeekBarChangeListener {
     private static final String TAG = "VibratorTuningPreference";
 
-    private static String FILE_PATH = null;
-    private static int MAX_VALUE;
-    private static int WARNING_THRESHOLD;
-    private static int DEFAULT_VALUE;
-    private static int MIN_VALUE;
+    private static final String FILE_PATH = "/sys/class/timed_output/vibrator/level";;
+    private static final int MAX_VALUE = 32;
+    private static final int WARNING_THRESHOLD = 30;
+    private static final int DEFAULT_VALUE = 29;
+    private static final int MIN_VALUE = 12;
 
     private Context mContext;
     private SeekBar mSeekBar;
@@ -62,12 +63,6 @@ public class VibratorTuningPreference extends DialogPreference implements SeekBa
     public VibratorTuningPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
-
-        FILE_PATH = context.getResources().getString(R.string.vibrator_sysfs_file);
-        MAX_VALUE = Integer.valueOf(context.getResources().getString(R.string.intensity_max_value));
-        WARNING_THRESHOLD = Integer.valueOf(context.getResources().getString(R.string.intensity_warning_threshold));
-        DEFAULT_VALUE = Integer.valueOf(context.getResources().getString(R.string.intensity_default_value));
-        MIN_VALUE = Integer.valueOf(context.getResources().getString(R.string.intensity_min_value));
 
         setDialogLayoutResource(R.layout.preference_dialog_vibrator_tuning);
     }
@@ -157,15 +152,9 @@ public class VibratorTuningPreference extends DialogPreference implements SeekBa
     }
 
     public static void restore(Context context) {
-        FILE_PATH = context.getResources().getString(R.string.vibrator_sysfs_file);
-
         if (!isSupported(FILE_PATH)) {
             return;
         }
-
-        MAX_VALUE = Integer.valueOf(context.getResources().getString(R.string.intensity_max_value));
-        DEFAULT_VALUE = Integer.valueOf(context.getResources().getString(R.string.intensity_default_value));
-        MIN_VALUE = Integer.valueOf(context.getResources().getString(R.string.intensity_min_value));
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
         int strength = percentToStrength(settings.getInt("percent", strengthToPercent(DEFAULT_VALUE)));

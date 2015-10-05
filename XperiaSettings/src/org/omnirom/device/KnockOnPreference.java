@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 Arnav Gupta, AOKP
+ * Copyright (C) 2015 Olivier K.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,18 +34,15 @@ public class KnockOnPreference extends CheckBoxPreference {
 
     public static String TAG = "KnockOnPreference";
 
-    public static String SYSFS_PATH = null;
-    public static String ENABLED_VALUE;
-    public static String DISABLED_VALUE;
+    private static final String SYSFS_PATH = "/sys/devices/virtual/input/clearpad/wakeup_gesture";
+    private static final String ENABLED_VALUE = "1";
+    private static final String DISABLED_VALUE = "0";
 
     private Context CONTEXT;
 
     public KnockOnPreference(final Context context, final AttributeSet attrst) {
         super(context, attrst);
         CONTEXT = context;
-        SYSFS_PATH = context.getString(R.string.knock_on_sysfs_file);
-        ENABLED_VALUE = context.getString(R.string.knock_on_enabled_value);
-        DISABLED_VALUE = context.getString(R.string.knock_on_disabled_value);
     }
 
     @Override
@@ -56,14 +54,10 @@ public class KnockOnPreference extends CheckBoxPreference {
     protected void onClick() {
         String val = getValueFromState(!isChecked());
         setChecked(!isChecked());
-        //Log.d(TAG, SYSFS_PATH + val);
         Utils.writeValue(SYSFS_PATH, val);
     }
 
     public static void restore(Context context) {
-        SYSFS_PATH = context.getString(R.string.knock_on_sysfs_file);
-        DISABLED_VALUE = context.getString(R.string.knock_on_disabled_value);
-        ENABLED_VALUE = context.getString(R.string.knock_on_enabled_value);
         if (!Utils.fileExists(SYSFS_PATH)) {
             return;
         }
@@ -81,9 +75,8 @@ public class KnockOnPreference extends CheckBoxPreference {
     }
 
     public Boolean checkSupport() {
-        SYSFS_PATH = getContext().getString(R.string.knock_on_sysfs_file);
         Boolean fileExists = Utils.fileExists(SYSFS_PATH);
-        if ((fileExists)) {
+        if (fileExists) {
             Log.w(TAG, "File exists: " + SYSFS_PATH + " : " + fileExists);
             return true;
         } else {
