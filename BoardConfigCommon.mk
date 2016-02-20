@@ -153,6 +153,9 @@ TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
 TW_NO_SCREEN_BLANK := true
 
+# Multirom
+#TARGET_RECOVERY_IS_MULTIROM := true
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
