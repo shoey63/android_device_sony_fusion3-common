@@ -1,9 +1,15 @@
 # mount point	fstype	device			[device2]   fstype2
 
-/boot		emmc	/dev/block/platform/msm_sdcc.1/by-name/boot
-/recovery	emmc	/dev/block/platform/msm_sdcc.1/by-name/FOTAKernel
-/system		ext4	/dev/block/platform/msm_sdcc.1/by-name/system
-/cache		ext4	/dev/block/platform/msm_sdcc.1/by-name/cache
-/data		ext4	/dev/block/platform/msm_sdcc.1/by-name/userdata	 length=-16384
-/external_sd    vfat    /dev/block/mmcblk1p1    /dev/block/mmcblk1  flags=display="Micro SDcard";storage;wipeingui;removable
-/usb-otg        vfat    /dev/block/sda1         /dev/block/sda      flags=display="USB OTG";storage;wipeingui;removable
+/boot		        emmc	/dev/block/platform/msm_sdcc.1/by-name/boot
+/recovery	      emmc	/dev/block/platform/msm_sdcc.1/by-name/FOTAKernel flags=backup=0;flashimg=1;display="Fota Kernel"
+/system		      ext4	/dev/block/platform/msm_sdcc.1/by-name/system
+/cache		      ext4	/dev/block/platform/msm_sdcc.1/by-name/cache
+/data		        ext4	/dev/block/platform/msm_sdcc.1/by-name/userdata	  length=-16384
+/ta		          emmc	/dev/block/platform/msm_sdcc.1/by-name/TA         flags=backup=1;flashimg=1;display="Trim Area"
+/system_image   emmc	/dev/block/platform/msm_sdcc.1/by-name/system     flags=backup=1;flashimg=1;display="System Image"
+/baseband1	    emmc	/dev/block/platform/msm_sdcc.1/by-name/m9kefs1    flags=backup=1;display="Baseband"
+/baseband2	    emmc	/dev/block/platform/msm_sdcc.1/by-name/m9kefs2    flags=backup=1;subpartitionof=/baseband1
+/baseband3	    emmc	/dev/block/platform/msm_sdcc.1/by-name/m9kefs3    flags=backup=1;subpartitionof=/baseband1
+
+/external_sd    vfat  /dev/block/mmcblk1p1        /dev/block/mmcblk1    flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg        vfat  /dev/block/sda1                 /dev/block/sda    flags=display="USB OTG";storage;wipeingui;removable
