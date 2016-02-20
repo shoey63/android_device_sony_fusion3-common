@@ -33,9 +33,9 @@ busybox mount -t sysfs sysfs /sys
 busybox echo 100 > ${BOOTREC_VIBRATOR}
 
 # trigger blue(-ish) LED
-busybox echo 51 > ${BOOTREC_LED_RED}
-busybox echo 181 > ${BOOTREC_LED_GREEN}
-busybox echo 229 > ${BOOTREC_LED_BLUE}
+busybox echo 86 > ${BOOTREC_LED_RED}
+busybox echo 190 > ${BOOTREC_LED_GREEN}
+busybox echo 255 > ${BOOTREC_LED_BLUE}
 
 # android ramdisk
 load_image=/sbin/ramdisk.cpio
@@ -46,10 +46,10 @@ busybox timeout -t 3 keycheck
 # boot decision
 if [ $? -eq 42 ] || busybox grep -q warmboot=0x77665502 /proc/cmdline ; then
 	busybox echo 'RECOVERY BOOT' >>boot.txt
-	# white(-ish) led for recoveryboot
-	busybox echo 131 > ${BOOTREC_LED_RED}
-	busybox echo 229 > ${BOOTREC_LED_GREEN}
-	busybox echo 51 > ${BOOTREC_LED_BLUE}
+	# gold(-ish) led for recoveryboot
+	busybox echo 182 > ${BOOTREC_LED_RED}
+	busybox echo 255 > ${BOOTREC_LED_GREEN}
+	busybox echo 0 > ${BOOTREC_LED_BLUE}
 	# recovery ramdisk
 	busybox mknod -m 600 ${BOOTREC_FOTA_NODE}
 	busybox mount -o remount,rw /
